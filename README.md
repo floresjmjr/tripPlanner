@@ -1,1 +1,1 @@
-# Nutrition Tracker App
+# Trip Planner App
