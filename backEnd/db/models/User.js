@@ -19,7 +19,6 @@ User.init(
         isAlpha: true,
       }
     },
-
     email: {
       type: DataTypes.STRING,
       allowNull: false,
