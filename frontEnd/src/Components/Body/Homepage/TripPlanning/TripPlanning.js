@@ -6,12 +6,12 @@ const TripPlanning = () => {
     <div className="trip-planning-container">
       <header>
         <h1>Recently viewed and upcoming</h1>
-        <form className="plan-new-trip" action="/plan-trip">
+        <form className="plan-new-trip" action="/plan">
           <button type="click">+ Plan new trip</button>
         </form>
       </header>
       <section className="recent-upcoming">
-        <p>You haven't created anything yet. <a href='/plan-trip'>Plan a new trip</a>.</p>
+        <p>You haven't created anything yet. <a href='/plan'>Plan a new trip</a>.</p>
       </section>
       <section className="visited-locations">
         <div className="map-image-placeholder"></div>
@@ -20,7 +20,7 @@ const TripPlanning = () => {
         <div className="trip-guide-container">
           <div className="trip-guide-header">
             <h4>Your trips</h4>
-            <form className="plan-new-trip" action="/plan-trip">
+            <form className="plan-new-trip" action="/plan">
               <button type="click">+ Plan new trip</button>
             </form>
           </div>
@@ -29,7 +29,7 @@ const TripPlanning = () => {
         <div className="trip-guide-container">
           <div className="trip-guide-header">
             <h4>Your guides</h4>
-            <form className="plan-new-trip" action="/plan-trip">
+            <form className="plan-new-trip" action="/plan-guide">
               <button type="click">+ Create new guide</button>
             </form>
           </div>
