@@ -1,11 +1,7 @@
-const { Sequelize } = require('sequelize/types');
-const path = require('path');
+const { Sequelize } = require('sequelize');
+require('dotenv').config()
 
-const db = new Sequelize({
-  dialect: 'sqlite',
-  storage: path.join(__dirname, 'db.sqlite'),
-  logging: false,
-});
+const db = new Sequelize(`postgres://${process.env.USERNAME}:${process.env.DB_PASSWORD}@raja.db.elephantsql.com/${process.env.DATABASE}`);
 
 const connection = async () => {
   try {

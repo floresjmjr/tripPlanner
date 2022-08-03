@@ -1,15 +1,20 @@
 import './App.css';
-import Header from './Components/Header/Header/Header'
-import Body from './Components/Body/Homepage/Homepage'
-import Footer from './Components/Footer/Footer/Footer'
+import Homepage from './Components/Body/Homepage/Homepage'
+import PlanTrip from './Components/Body/PlanTrip/PlanTrip'
+
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
 
 function App() {
   return (
-    <div>
-      <Header/>
-      <Body/>
-      <Footer/>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<Homepage/>}>
+          <Route path='/home' element={<Homepage/>}/>
+        </Route>
+        <Route path='/plan' element={<PlanTrip/>}/>
+      </Routes>
+    </BrowserRouter>
   );
 }
 

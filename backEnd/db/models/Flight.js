@@ -1,20 +1,28 @@
 const db = require('../configuration');
 const {Model, DataTypes} = require('sequelize');
 
-class Itnerary extends Model {}
+class Flight extends Model {}
 
-Itnerary.init(
+Flight.init(
   {
-    name: {
+    flightAirlineNumber: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    startDate: {
+    departingDate: {
       type: DataTypes.DATE,
       allowNull: false,
     },
-    endDate: {
+    arrivalDate: {
       type: DataTypes.DATE,
+      allowNull: false,
+    },
+    startLocation: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    endLocation: {
+      type: DataTypes.STRING,
       allowNull: false,
     }
   },
@@ -24,5 +32,5 @@ Itnerary.init(
   }
 );
 
-module.exports = Itnerary;
+module.exports = Flight;
 

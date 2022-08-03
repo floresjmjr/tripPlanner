@@ -1,7 +1,8 @@
 const express = require('express');
 const app = express();
 const port = 8080;
-require('./db/associations')
+require('dotenv').config()
+
 
 app.use('/', require('./api'))
 

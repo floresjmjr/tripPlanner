@@ -1,5 +1,5 @@
 import React from 'react'
-import './Footer.css'
+import './MainFooter.css'
 
 let first_footer_links = [
   "Blog", "Report security issue", "Terms of use & Privacy policy", "Mobile app",
