@@ -20,7 +20,7 @@ jobs:
     # Steps represent a sequence of tasks that will be executed and depend on each other.
     steps:
       - name: Checkout github repo
-      - uses: actions/checkout@v3
+        uses: actions/checkout@v3
 
       - name: Use Node.js
         uses: actions/setup-node@v3
@@ -28,10 +28,10 @@ jobs:
           node-version: '16.13.x'
       
       - name: Install
-      - run: npm ci
+        run: npm ci
 
       - name: run tests
-      - run: npm run test
+        run: npm run test
       
 
       
