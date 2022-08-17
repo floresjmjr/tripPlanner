@@ -1,7 +1,7 @@
 const router = require("express").Router();
 
 router.use("/", require("./home"));
-router.use("/", require("./trip"));
+router.use("/trip", require("./trip"));
 router.use("/", require("./flight"));
 router.use("/", require("./lodging"));
 router.use("/", require("./budget"));

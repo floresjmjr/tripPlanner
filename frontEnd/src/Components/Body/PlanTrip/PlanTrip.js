@@ -12,7 +12,7 @@ const PlanTrip = ()=> {
         <div className="plan-trip-header">
           <h1>Plan a new trip</h1>
         </div>
-        <form className="plan-trip-form" method="POST" action="/plan">
+        <form className="plan-trip-form" method="POST" action="http://localhost:8080/trip/plan">
           <div className="plan-location">
             <p>Where to?</p>
             <input name="location" type='text' placeholder="e.g. Paris, Hawaii, Japan"/>

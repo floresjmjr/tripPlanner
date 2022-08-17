@@ -1,11 +1,11 @@
 const db = require('./configuration')
 const User = require('./models/User')
 const Flight = require('./models/Flight')
-const Itnerary = require('./models/Itnerary')
+const Itinerary = require('./models/Itinerary')
 
-User.hasMany(Itnerary)
-Itnerary.belongsTo(User)
-Itnerary.hasMany(Flight)
-Flight.belongsTo(Itnerary)
+User.hasMany(Itinerary)
+Itinerary.belongsTo(User)
+Itinerary.hasMany(Flight)
+Flight.belongsTo(Itinerary)
 
-module.exports = { db, User, Itnerary, Flight };
+module.exports = { db, User, Itinerary, Flight };
