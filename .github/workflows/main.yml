@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: Github Actions Workflow First Draft
+name: Backend Tests
 
 # Controls when the workflow will run
 on:
@@ -26,7 +26,6 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: '16.13.x'
-          cache: npm
       
       - name: Install
       - run: npm ci
