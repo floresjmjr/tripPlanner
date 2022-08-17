@@ -1,7 +1,10 @@
 const { Sequelize } = require('sequelize');
 require('dotenv').config()
-
-const db = new Sequelize(`postgres://${process.env.USERNAME}:${process.env.DB_PASSWORD}@raja.db.elephantsql.com/${process.env.DATABASE}`);
+const uri = `postgres://${process.env.USERNAME}:${process.env.DB_PASSWORD}@raja.db.elephantsql.com/${process.env.DATABASE}`
+const db = new Sequelize(
+  uri, {
+    logging: false
+  });
 
 const connection = async () => {
   try {
