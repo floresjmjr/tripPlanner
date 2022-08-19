@@ -9,8 +9,12 @@ const Homepage = () => {
   return (
     <div>
       <Header/>
-      <TripPlanning/>
-      <Explore/>
+      <div className='body-container'>
+        <div className='body-component'>
+          <TripPlanning/>
+          <Explore/>
+        </div>
+      </div>
       <Footer/>
     </div>
     )

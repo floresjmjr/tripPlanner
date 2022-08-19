@@ -1,10 +1,16 @@
 .footer-container {
   display: flex;
+  justify-content: center;
+  background-color:#f3f4f5;
+}
+
+.footer-component {
+  display: flex;
   justify-content: space-around;
   align-items: start;
-  background-color:#f3f4f5;
   padding-top: 15px;
   padding-bottom: 80px;
+  width: 1140px;
 }
 
 .footer-links-container p {

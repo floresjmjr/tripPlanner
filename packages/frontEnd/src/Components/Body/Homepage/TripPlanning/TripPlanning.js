@@ -4,12 +4,12 @@ import './TripPlanning.css'
 const TripPlanning = () => {
   return (
     <div className="trip-planning-container">
-      <header>
+      <div className="recent-trip-container">
         <h1>Recently viewed and upcoming</h1>
         <form className="plan-new-trip" action="/plan">
           <button type="click">+ Plan new trip</button>
         </form>
-      </header>
+      </div>
       <section className="recent-upcoming">
         <p>You haven't created anything yet. <a href='/plan'>Plan a new trip</a>.</p>
       </section>
