@@ -1,0 +1,1 @@
+web: cd packages/backEnd && node server.js

@@ -5,11 +5,14 @@
   "description": "A mobile/web app that creates traveling itineraries.",
   "main": "index.js",
   "scripts": {
-    "start": "lerna run start",
+    "load": "lerna run start",
     "dev": "lerna run dev",
     "test": "lerna run test --scope=backend",
     "new-version": "lerna version --conventional-commits --yes",
-    "diff": "lerna diff"
+    "diff": "lerna diff",
+    "postinstall": "if [$CLIENT_ENV]; then npm run postinstall-client; elif [$SERVER_ENV]; then npm run postinstall-server; else echo no environment detected, please set CLIENT_ENV or SERVER_ENV; fi",
+    "postinstall-client": "cd packages/frontEnd && npm install && npm run build",
+    "postinstall-server": "cd packages/backEnd && npm install && npm"
   },
   "repository": {
     "type": "git",
