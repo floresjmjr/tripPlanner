@@ -19,24 +19,21 @@
   align-items: center;
 }
 
-.plan-new-trip {
-  align-items: center;
-}
-
-.plan-new-trip button {
+.plan-new-trip-orange {
+  text-decoration: none;
   background-color: #f75940;
   border: none;
   border-radius: 20px;
   font-weight: bold;
-  height: 40px;
   color: white;
-  padding: 5px 15px;
+  padding: 10px 15px;
+  font-size: .9rem;
 }
 
 
 /* Recent and Upcoming */
 
-.recent-upcoming a {
+.plan-new-trip-link {
   font-weight: bold;
   color: #f75940;
   text-decoration: none;
@@ -74,20 +71,21 @@
   box-sizing: border-box;
 }
 
-.trip-guide-container a {
-  font-weight: bold;
-  color: #f75940;
-  text-decoration: none;
-}
 .trip-guide-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.trip-guide-header button {
+.plan-new-trip-gray {
+  text-decoration: none;
   background-color: #e9ecef;
+  border: none;
+  border-radius: 20px;
+  font-weight: bold;
   color: black;
+  padding: 10px 15px;
+  font-size: .9rem;
 }
 
 .trip-guide-header h4 {
