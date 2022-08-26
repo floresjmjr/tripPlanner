@@ -39,6 +39,12 @@
   text-decoration: none;
 }
 
+.recent-trip-list-container {
+  display: flex;
+  justify-content: start;
+  width: 100%;
+  gap: 15px;
+}
 
 /* visited-locations */
 
@@ -75,6 +81,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 10px;
 }
 
 .plan-new-trip-gray {

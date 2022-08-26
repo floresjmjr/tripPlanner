@@ -10,8 +10,8 @@ const Destination = ()=> {
       <p>We are the owners of Misty Mountain Inn & Cottages whi...</p>
       <div className="destination-meta-data">
         <span>First Last</span>
-        <span><i class="fa-regular fa-heart"></i> 3</span>
-        <span><i class="fa-regular fa-eye"></i> 15</span>
+        <span><i className="fa-regular fa-heart"></i> 3</span>
+        <span><i className="fa-regular fa-eye"></i> 15</span>
       </div>
     </div>  
   )

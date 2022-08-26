@@ -12,15 +12,15 @@ let second_footer_links = [
   "Weather around the world", "Travel questions & answers"
 ]
 
-first_footer_links = first_footer_links.map((link)=>{
+first_footer_links = first_footer_links.map((link, idx)=>{
   return (
-    <li>{link}</li>
+    <li key={`first-footer-${idx}`}>{link}</li>
   )
 })
 
-second_footer_links = second_footer_links.map((link)=>{
+second_footer_links = second_footer_links.map((link, idx)=>{
   return (
-    <li>{link}</li>
+    <li key={`second-footer-${idx}`}>{link}</li>
   )
 })
 
@@ -30,10 +30,10 @@ const Footer = () => {
       <div className="footer-component">
         <div className="trademark">
           <p>Made with ❤ in SFO & more</p> 
-          <p>© 2022 Travelchime Inc.</p>
+          <p>© 2022 Jorge Flores.</p>
         </div>
         <div className="footer-links-container">
-          <p>Wanderlog</p>
+          <p>Wanderbranch</p>
           <div className="footer-links">
             <ul>
               {first_footer_links}
