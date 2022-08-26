@@ -7,6 +7,8 @@ const PlanTrip = ()=> {
 
   const BASE_URL = process.env.REACT_APP_SERVER_BASE_URL
 
+  console.log(process.env.NODE_ENV)
+
   return(
     <div>
       <Header/>
@@ -14,7 +16,7 @@ const PlanTrip = ()=> {
         <div className="plan-trip-header">
           <h1>Plan a new trip</h1>
         </div>
-        <form className="plan-trip-form" method="POST" action={`${BASE_URL}/trip/plan`}>
+        <form className="plan-trip-form" method="POST" action={`${BASE_URL}/itinerary`}>
           <div className="plan-location">
             <p>Where to?</p>
             <input name="location" type='text' placeholder="e.g. Paris, Hawaii, Japan"/>

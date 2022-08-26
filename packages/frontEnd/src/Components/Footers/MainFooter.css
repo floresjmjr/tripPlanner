@@ -8,7 +8,7 @@
   display: flex;
   justify-content: space-around;
   align-items: start;
-  padding-top: 15px;
+  padding-top: 40px;
   padding-bottom: 80px;
   width: 1140px;
 }
@@ -38,6 +38,7 @@
 
 .mobile-links p {
   font-weight: bold;
+  margin-bottom: 20px;
 }
 
 .mobile-store {

@@ -7,7 +7,7 @@ const Header = () => {
       <div className="header-component">
         <div className="left-nav">
           <div className="logo-link">
-            <p><i class="fa-solid fa-plane"></i></p>
+            <p><i className="fa-solid fa-plane"></i></p>
             <h2>wanderbranch</h2>
           </div>
           <div className="nav-links">
@@ -18,13 +18,13 @@ const Header = () => {
         <div className="right-nav">
           <div className="search-notification-account">
             <div className="search-bar">
-              <i class="fa-solid fa-magnifying-glass"></i>          
+              <i className="fa-solid fa-magnifying-glass"></i>          
               <form action='/search' method='POST'>
                 <input type='text' placeholder='Search a place or user'></input>
               </form>
             </div>
             <div className="notifications-icon">
-              <i class="fa-regular fa-bell"></i>
+              <i className="fa-regular fa-bell"></i>
             </div>
             <div className="account-icon"><p>J</p></div>
           </div>
