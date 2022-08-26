@@ -22,15 +22,12 @@ const TripPlanning = () => {
 
   // Lifecycle
   useEffect(()=>{
-    console.log('useEffect')
     getAllItineraries()
-    console.log('end of useEffect')
   }, [])
 
 
   // Logic
   if (trips.length) {
-    console.log('TIRPSPSSPPS')
     console.log('trips', trips)
     recent_trips = trips.map((obj)=>{
       return <TripCard location={obj.location} start_date={obj.startDate} end_date={obj.endDate}/>
