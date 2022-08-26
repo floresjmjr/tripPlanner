@@ -6,7 +6,7 @@ require('dotenv').config()
 require('./db/associations')
 
 // Cors configuration
-const whitelist = ["http://localhost:3000", "https://tripplanner-client.herokuapp.com/" ]
+const whitelist = ["http://localhost:3000", "https://tripplanner-client.herokuapp.com" ]
 
 const cors_options = {
   origin: (origin, callback)=> {
