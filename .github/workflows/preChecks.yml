@@ -1,0 +1,62 @@
+# This is the root workflow that will be become the 'called' workflow when it is reused.
+
+name: Pre Commit Checks
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [ "main", "dev" ]
+  pull_request:
+    branches: [ "main", "dev" ]
+
+jobs:  
+  format:
+    name: Format Check 
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout github repo
+        uses: actions/checkout@v3
+
+      - name: Check Formatting
+        uses: creyD/prettier_action@v4.2
+        with:
+          dry: True
+
+  # Relies on which npm package? JS ESLint, HTML HTMLHint, YAML YamlLint, CSS stylelint
+  # lint:
+  #   name: Lint issues
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - name: Checkout github repo
+  #       uses: actions/checkout@v3
+      
+  #     - name: Check Code Quality
+  #       uses: github/super-linter@v4.9.5
+  #       with:
+
+  test:
+    name: Build and run tests
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout github repo
+        uses: actions/checkout@v3
+
+      - name: Use Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18.8.x'
+
+      - run: npm ci
+      # - run: npm run build --if-present
+      - run: npm run test
+        env:
+          USERNAME: ${{ secrets.USERNAME }}
+          DATABASE: ${{ secrets.DATABASE }}
+          DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
+      
+
+      
+
+
+
+
