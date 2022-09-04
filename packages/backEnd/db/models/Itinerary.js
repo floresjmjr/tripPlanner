@@ -1,5 +1,5 @@
-const db = require('../configuration');
-const {Model, DataTypes} = require('sequelize');
+const db = require("../configuration");
+const {Model, DataTypes} = require("sequelize");
 
 class Itinerary extends Model {}
 
@@ -20,7 +20,7 @@ Itinerary.init(
     endDate: {
       type: DataTypes.DATE,
       allowNull: true,
-    }
+    },
   },
   {
     sequelize: db,
@@ -29,4 +29,3 @@ Itinerary.init(
 );
 
 module.exports = Itinerary;
-

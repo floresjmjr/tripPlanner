@@ -1,5 +1,5 @@
-const db = require('../configuration');
-const {Model, DataTypes} = require('sequelize');
+const db = require("../configuration");
+const {Model, DataTypes} = require("sequelize");
 
 class User extends Model {}
 
@@ -7,20 +7,20 @@ User.init(
   {
     firstName: {
       type: DataTypes.STRING,
-      allowNull: false
+      allowNull: false,
     },
     lastName: {
       type: DataTypes.STRING,
-      allowNull: true
+      allowNull: true,
     },
     email: {
       type: DataTypes.STRING,
-      allowNull: false
+      allowNull: false,
     },
     password: {
       type: DataTypes.STRING,
       allowNull: false,
-    }
+    },
   },
   {
     sequelize: db,
@@ -29,4 +29,3 @@ User.init(
 );
 
 module.exports = User;
-

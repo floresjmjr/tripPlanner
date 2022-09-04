@@ -1,5 +1,5 @@
-const db = require('../configuration');
-const {Model, DataTypes} = require('sequelize');
+const db = require("../configuration");
+const {Model, DataTypes} = require("sequelize");
 
 class Flight extends Model {}
 
@@ -24,7 +24,7 @@ Flight.init(
     endLocation: {
       type: DataTypes.STRING,
       allowNull: false,
-    }
+    },
   },
   {
     sequelize: db,
@@ -33,4 +33,3 @@ Flight.init(
 );
 
 module.exports = Flight;
-

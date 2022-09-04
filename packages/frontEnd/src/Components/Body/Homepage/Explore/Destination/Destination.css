@@ -14,7 +14,7 @@
   margin-bottom: 15px;
 }
 
-.destination-image-placeholder{
+.destination-image-placeholder {
   width: 200px;
   height: 140px;
   border-radius: 20px;
@@ -25,5 +25,3 @@
   display: flex;
   justify-content: space-between;
 }
-
-
