@@ -17,7 +17,7 @@ router.post('/', async (req, res)=> {
       const itinerary_instance = await Itinerary.create(itinerary_obj)
       try {
         const result = await user.addItinerary(itinerary_instance)
-        return send(result)
+        return res.redirect(process.env.CLIENT_BASE_URL)
       } catch (error) {
         return res.send(error)
       }
