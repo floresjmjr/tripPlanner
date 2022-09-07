@@ -6,7 +6,7 @@ import Header from '../../Headers/MainHeader'
 const PlanTrip = ()=> {
 
   let BASE_URL = process.env.REACT_APP_SERVER_BASE_URL
-
+  console.log('node env', process.env.NODE_ENV)
   if (process.env.NODE_ENV === 'development') {
     console.log('dev env')
     BASE_URL = "http://localhost:8080"
