@@ -4,7 +4,7 @@ let BASE_URL = process.env.REACT_APP_SERVER_BASE_URL
 
 if (process.env.NODE_ENV === 'development') {
   console.log('dev env')
-  BASE_URL = process.env.REACT_APP_DEV_SERVER_BASE_URL
+  BASE_URL = "http://localhost:8080"
 }
 
 const axiosConfig = axios.create({
