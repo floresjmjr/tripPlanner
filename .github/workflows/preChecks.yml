@@ -5,9 +5,9 @@ name: Pre Commit Checks
 on:
   workflow_dispatch:
   push:
-    branches: [ "main", "dev" ]
+    branches: [ "dev" ]
   pull_request:
-    branches: [ "main", "dev" ]
+    branches: [ "main" ]
 
 jobs:  
   format:
