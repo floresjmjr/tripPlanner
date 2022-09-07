@@ -5,8 +5,23 @@ const port = process.env.PORT || 8080;
 require('dotenv').config()
 require('./db/associations')
 
+
+
+
+// Parses incoming requests (eg POST body)
+app.use(express.urlencoded({extended: true}))
+
+// API endpoints directory
+app.use('/', require('./api'))
+
 // Cors configuration
-const whitelist = ["http://localhost:3000", "http://tripplanner-client.herokuapp.com", "http://wanderbranch.herokuapp.com", "https://tripplanner-client.herokuapp.com", "https://wanderbranch.herokuapp.com"]
+const whitelist = [
+  "http://localhost:3000", "http://localhost:8080", 
+  "http://tripplanner-client.herokuapp.com", "http://tripplanner-server.herokuapp.com", 
+  "https://tripplanner-client.herokuapp.com", "https://tripplanner-server.herokuapp.com", 
+  "http://wanderbranch.herokuapp.com", "http://wanderbranch-api.herokuapp.com", 
+  "https://wanderbranch.herokuapp.com", "https://wanderbranch-api.herokuapp.com", 
+]
 
 const cors_options = {
   origin: (origin, callback)=> {
@@ -20,12 +35,6 @@ const cors_options = {
 }
 
 app.use(cors(cors_options))
-
-// Parses incoming requests (eg POST body)
-app.use(express.urlencoded({extended: true}))
-
-// API endpoints directory
-app.use('/', require('./api'))
 
 
 // Connect Server
