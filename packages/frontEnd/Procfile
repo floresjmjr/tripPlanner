@@ -1,1 +1,1 @@
-echo "web: cd packages/client && node server.js" > Procfile
+web: cd packages/client && node server.js
