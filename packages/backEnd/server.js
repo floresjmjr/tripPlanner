@@ -5,6 +5,15 @@ const port = process.env.PORT || 8080;
 require('dotenv').config()
 require('./db/associations')
 
+
+
+
+// Parses incoming requests (eg POST body)
+app.use(express.urlencoded({extended: true}))
+
+// API endpoints directory
+app.use('/', require('./api'))
+
 // Cors configuration
 const whitelist = [
   "http://localhost:3000", "http://localhost:8080", 
@@ -26,12 +35,6 @@ const cors_options = {
 }
 
 app.use(cors(cors_options))
-
-// Parses incoming requests (eg POST body)
-app.use(express.urlencoded({extended: true}))
-
-// API endpoints directory
-app.use('/', require('./api'))
 
 
 // Connect Server
