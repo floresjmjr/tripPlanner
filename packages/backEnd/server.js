@@ -27,6 +27,7 @@ app.use(express.urlencoded({extended: true}))
 // API endpoints directory
 app.use('/', require('./api'))
 
+
 // Connect Server
 app.listen(port, ()=> {
   console.log(`A server session has been created on port ${port}. \nAccessible via http://localhost:${port}`)
