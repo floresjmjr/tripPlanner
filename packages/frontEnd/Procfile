@@ -1,1 +1,1 @@
-web: cd packages/frontEnd && npm run build
+web: cd packages/frontEnd && npm run start
