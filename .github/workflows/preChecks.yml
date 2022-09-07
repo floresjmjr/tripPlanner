@@ -47,7 +47,7 @@ jobs:
           node-version: '18.8.x'
 
       - run: npm ci
-      - run: npm run build
+      - run: npm run build --verbose
       - run: npm run test
         env:
           USERNAME: ${{ secrets.USERNAME }}
