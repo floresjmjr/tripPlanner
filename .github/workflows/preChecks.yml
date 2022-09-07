@@ -24,7 +24,7 @@ jobs:
 
   # Relies on which npm package? JS ESLint, HTML HTMLHint, YAML YamlLint, CSS stylelint
   # lint:
-  #   name: Lint issues
+  #   name: Lint Check
   #   runs-on: ubuntu-latest
   #   steps:
   #     - name: Checkout github repo
@@ -35,7 +35,7 @@ jobs:
   #       with:
 
   test:
-    name: Run tests
+    name: Test Check
     runs-on: ubuntu-latest
     steps:
       - name: Checkout github repo
@@ -54,7 +54,7 @@ jobs:
           DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
 
   # build:
-  #   name: Create build
+  #   name: Build Check
   #   runs-on: ubuntu-latest
   #   steps:
   #     - name: Checkout github repo
