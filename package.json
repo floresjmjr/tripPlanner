@@ -6,6 +6,7 @@
   "main": "index.js",
   "scripts": {
     "start": "lerna run start",
+    "build": "lerna run build --scope=frontend",
     "dev": "lerna run dev",
     "test": "lerna run test --scope=backend",
     "new-version": "lerna version --conventional-commits --yes",
