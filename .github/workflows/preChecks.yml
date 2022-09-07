@@ -35,7 +35,7 @@ jobs:
   #       with:
 
   test:
-    name: Build and run tests
+    name: Run tests
     runs-on: ubuntu-latest
     steps:
       - name: Checkout github repo
@@ -47,12 +47,21 @@ jobs:
           node-version: '18.8.x'
 
       - run: npm ci
-      # - run: npm run build --if-present
       - run: npm run test
         env:
           USERNAME: ${{ secrets.USERNAME }}
           DATABASE: ${{ secrets.DATABASE }}
           DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
+  build:
+    name: FrontEnd Build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout github repo
+        needs: test
+
+      - run: cd packages/frontEnd && npm run build
+
+
       
 
       
