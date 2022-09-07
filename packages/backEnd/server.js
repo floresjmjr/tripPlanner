@@ -27,22 +27,6 @@ app.use(express.urlencoded({extended: true}))
 // API endpoints directory
 app.use('/', require('./api'))
 
-//When no method and/or path matches, returns 404
-app.use((req, res) => {
-  res
-    .status(404)
-    .send(
-      `Sorry, the "${req.method}" method to the path "${req.path}" is not a valid, please change the either the request, path or both.`
-    );
-  //Ideally a cool 404 page would be rendered
-});
-//Error handling function
-app.use((err, req, res, next) => {
-  console.error(`Start of Error:\n ${err} \nEnd of Error`);
-  res.status(500).send("Server error, please try again or at some other time.");
-  //Ideally a cool 500 page would be rendered
-});
-
 
 // Connect Server
 app.listen(port, ()=> {
