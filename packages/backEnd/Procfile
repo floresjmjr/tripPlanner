@@ -1,1 +1,1 @@
-web: cd packages/backEnd && node server.js
+echo "web: cd packages/server && node server.js" > Procfile
