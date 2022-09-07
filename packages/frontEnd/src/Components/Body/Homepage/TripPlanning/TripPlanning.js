@@ -8,8 +8,6 @@ const TripPlanning = () => {
   const [trips, set_trips] = useState([])
   let recent_trips = (<p>You haven't created anything yet. <a className='plan-new-trip-link' href="/plan">Plan a new trip</a>.</p>)
 
-  console.log(process.env.REACT_APP_SERVER_BASE_URL)
-
   // Functions
   const getAllItineraries = async()=>{
     try {
@@ -29,8 +27,8 @@ const TripPlanning = () => {
   // Logic
   if (trips.length) {
     console.log('trips', trips)
-    recent_trips = trips.map((obj)=>{
-      return <TripCard location={obj.location} start_date={obj.startDate} end_date={obj.endDate}/>
+    recent_trips = trips.map((obj, idx)=>{
+      return <TripCard key={`trip-item-${idx}`} location={obj.location} start_date={obj.startDate} end_date={obj.endDate}/>
     })
   }
 

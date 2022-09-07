@@ -11,7 +11,7 @@ const Header = () => {
             <h2>wanderbranch</h2>
           </div>
           <div className="nav-links">
-            <a href="#">Home</a>
+            <a href="/home">Home</a>
             <a href="#">Travel guides</a>
           </div>
         </div>
